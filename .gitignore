@@ -1,0 +1,6 @@
+data/*
+software/HaGRID/hagrid/fist
+software/HaGRID/hagrid/fist_label
+software/yolov7/images
+software/yolov7/data/train/*
+software/yolov7/data/val/*

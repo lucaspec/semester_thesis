@@ -1,0 +1,6 @@
+dataset:
+  dataset_annotations: annotations # Path to annotations
+  dataset_folder: dataset # Path to images
+  phases: [subsample] # names of annotation directories
+  targets:
+    - fist

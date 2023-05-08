@@ -8,6 +8,7 @@ sys.path.append('./')  # to run '$ python *.py' files in subdirectories
 import torch
 import torch.nn as nn
 from torch.utils.mobile_optimizer import optimize_for_mobile
+from torchsummary import summary
 
 import models
 from models.experimental import attempt_load, End2End
@@ -46,6 +47,7 @@ if __name__ == '__main__':
     device = select_device(opt.device)
     model = attempt_load(opt.weights, map_location=device)  # load FP32 model
     labels = model.names
+    #summary(model, (3, 640, 640))
 
     # Checks
     gs = int(max(model.stride))  # grid size (max stride)

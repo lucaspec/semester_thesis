@@ -117,7 +117,11 @@ def try_export(inner_func):
 def export_torchscript(model, im, file, optimize, prefix=colorstr('TorchScript:')):
     # YOLOv5 TorchScript model export
     LOGGER.info(f'\n{prefix} starting export with torch {torch.__version__}...')
-    f = file.with_suffix('.torchscript')
+    f = file.with_suffix('.torchscript.ptl')
+
+    # tsl = torch.jit.trace(model, im, strict=False)
+    # tsl = optimize_for_mobile(tsl)
+    # tsl._save_for_lite_interpreter(f)
 
     ts = torch.jit.trace(model, im, strict=False)
     d = {'shape': im.shape, 'stride': int(max(model.stride)), 'names': model.names}
@@ -125,6 +129,7 @@ def export_torchscript(model, im, file, optimize, prefix=colorstr('TorchScript:'
     if optimize:  # https://pytorch.org/tutorials/recipes/mobile_interpreter.html
         optimize_for_mobile(ts)._save_for_lite_interpreter(str(f), _extra_files=extra_files)
     else:
+        print("not optimized!")
         ts.save(str(f), _extra_files=extra_files)
     return f, None
 

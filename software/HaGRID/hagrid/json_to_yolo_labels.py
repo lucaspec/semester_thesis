@@ -1,8 +1,13 @@
 import json
 import os
 
-json_file = "annotations.json"
-output_folder = "hand_labels"
+''' INFO: Script that converts HaGRID annotations to YOLO labels '''
+
+# JSON file wiht annotations
+json_file = "json_merged.json"
+
+# Output folder
+output_folder = "test_labels"
 
 with open(json_file, "r") as f:
     annotations = json.load(f)

@@ -85,11 +85,15 @@ def detect(save_img=False):
         # Inference
         t1 = time_synchronized()
         with torch.no_grad():   # Calculating gradients would cause a GPU memory leak
-            pred = model(img, augment=opt.augment)[0]
+            pred = model(img, augment=opt.augment)
+            print(pred[1][0].shape)
+            pred = pred[0]
         t2 = time_synchronized()
+        print(pred.shape)
 
         # Apply NMS
         pred = non_max_suppression(pred, opt.conf_thres, opt.iou_thres, classes=opt.classes, agnostic=opt.agnostic_nms)
+        print(pred)
         t3 = time_synchronized()
 
         # Apply Classifier

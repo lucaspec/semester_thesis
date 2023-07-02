@@ -1,13 +1,17 @@
 import json
 import os
+import sys
 
 ''' INFO: Script that converts HaGRID annotations to YOLO labels '''
 
-# JSON file wiht annotations
-json_file = "json_merged.json"
+# Check if the correct number of arguments is provided
+if len(sys.argv) < 3:
+    print("Usage: python script.py json_file output_folder")
+    sys.exit(1)
 
-# Output folder
-output_folder = "test_labels"
+# Retrieve arguments from command line
+json_file = str(sys.argv[1])
+output_folder = str(sys.argv[2])
 
 with open(json_file, "r") as f:
     annotations = json.load(f)

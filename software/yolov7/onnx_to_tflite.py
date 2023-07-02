@@ -3,7 +3,7 @@ import onnx
 import tensorflow as tf
 
 # Convert from onnx to TF
-onnx_model_path = 'yolov7-tiny.onnx'
+onnx_model_path = 'best-server.onnx'
 tf_model_path = 'model_tf'
 
 onnx_model = onnx.load(onnx_model_path)

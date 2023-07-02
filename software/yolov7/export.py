@@ -108,6 +108,7 @@ if __name__ == '__main__':
     try:
         print('\nStarting TorchScript-Lite export with torch %s...' % torch.__version__)
         f = opt.weights.replace('.pt', '.torchscript.ptl')  # filename
+        #tsl = torch.jit.script(model, img, strict=False)
         tsl = torch.jit.trace(model, img, strict=False)
         tsl = optimize_for_mobile(tsl)
         tsl._save_for_lite_interpreter(f)

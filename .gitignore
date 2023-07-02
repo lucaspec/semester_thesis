@@ -4,6 +4,8 @@ software/HaGRID/hagrid/fist_label
 software/yolov7/images
 software/yolov7/data/train/*
 software/yolov7/data/val/*
-*.png
 *.jpg
 *.jpeg
+*.png
+!report/images/results_pareto.png
+!report/images/results_table.png

@@ -16,6 +16,7 @@ software/yolov5/yolov5x.pt
 *.tflite
 *.pt
 *.ptl
+*.torchscript.ptl
 *.pdf
 *.pb
 *.apk

@@ -8,12 +8,17 @@ software/android/yolov5_tflite/TFDS/*
 software/android/yolov5_tflite/coco_models
 software/android/yolov7_pytorch/ObjectDetection/app/build/intermediates/*
 software/android/yolov7_pytorch/ObjectDetection/app/build/outputs/*
+software/yolov5/yolov5/runs/*
+software/yolov5/yolov5x.pt
 *.jpg
 *.jpeg
 *.png
 *.tflite
 *.pt
+*.ptl
 *.pdf
+*.pb
+*.apk
 !report/images/results_pareto.png
 !report/images/results_table.png
 

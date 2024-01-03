@@ -4,8 +4,16 @@ software/HaGRID/hagrid/fist_label
 software/yolov7/images
 software/yolov7/data/train/*
 software/yolov7/data/val/*
+software/android/yolov5_tflite/TFDS/*
+software/android/yolov5_tflite/coco_models
+software/android/yolov7_pytorch/ObjectDetection/app/build/intermediates/*
+software/android/yolov7_pytorch/ObjectDetection/app/build/outputs/*
 *.jpg
 *.jpeg
 *.png
+*.tflite
+*.pt
+*.pdf
 !report/images/results_pareto.png
 !report/images/results_table.png
+

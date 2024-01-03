@@ -20,6 +20,6 @@ software/yolov5/yolov5x.pt
 *.pdf
 *.pb
 *.apk
-!report/images/results_pareto.png
-!report/images/results_table.png
+!deliverables/report/images/results_pareto.png
+!deliverables/report/images/results_table.png
 

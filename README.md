@@ -21,5 +21,5 @@ An overview of each folder and its contents:
 ## Results
 
 Following plots summarize the most important results: 
-![Alt Text](report/images/results_table.png)
-![Alt Text](report/images/results_pareto.png)
+![table](deliverables/report/images/results_table.png)
+![plot](deliverables/report/images/results_pareto.png)

@@ -21,5 +21,5 @@ An overview of each folder and its contents:
 ## Results
 
 Following plots summarize the most important results: 
-![Alt Text](https://git.ee.ethz.ch/pbl/fs2023/luca-specht/-/tree/main/report/images/results_table.png?raw=true)
-![Alt Text](https://git.ee.ethz.ch/pbl/fs2023/luca-specht/-/tree/main/report/images/results_pareto.png?raw=true)
+![Alt Text](report/images/results_table.png)
+![Alt Text](report/images/results_pareto.png)
